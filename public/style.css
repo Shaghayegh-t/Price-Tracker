@@ -1,0 +1,55 @@
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.3/Vazirmatn.css');
+
+body {
+  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+  background:#0a0a0f;
+  color:#fff;
+  overflow-x:hidden;
+  margin:0; padding:0;
+}
+
+/* نئون */
+.neon { text-shadow: 0 0 5px #ff00ff9c,0 0 10px #00ffff,0 0 20px #ff00ff; }
+
+.card-glow {
+  background: rgba(0,0,0,0.6);
+  border:1px solid rgba(255,0,255,0.3);
+  box-shadow:0 0 10px #ff00ff,0 0 25px #00ffff;
+  transition:0.3s;
+}
+.card-glow:hover {
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 0 20px #ff00ff,0 0 40px #00ffff;
+}
+
+@keyframes neon-flash {
+  0%,100% { text-shadow:0 0 10px #00f2ff; opacity:1; }
+  50% { text-shadow:0 0 25px #00f2ff; opacity:0.7; }
+}
+.price-flash { animation: neon-flash 0.5s ease-in-out; }
+
+.glow-btn {
+  background:linear-gradient(90deg,#ff00ff,#00ffff);
+  color:white;
+  box-shadow:0 0 10px #ff00ff,0 0 20px #00ffff;
+  transition:all 0.3s;
+}
+.glow-btn:hover {
+  box-shadow:0 0 20px #ff00ff,0 0 40px #00ffff;
+  transform:scale(1.05);
+}
+
+#particle-canvas {
+  position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;
+  background:#0a0a0f;
+}
+
+@keyframes rowHighlight {
+  0% { background-color: rgba(0, 255, 255, 0.15); box-shadow: 0 0 10px #00ffff; }
+  50% { background-color: rgba(255, 0, 255, 0.25); box-shadow: 0 0 25px #ff00ff; }
+  100% { background-color: transparent; box-shadow: none; }
+}
+
+.new-row {
+  animation: rowHighlight 1.5s ease-in-out;
+}

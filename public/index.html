@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>💎 Price Tracking</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<div class="max-w-7xl mx-auto p-10">
+  <div class="flex justify-between items-center mb-8">
+    <h1 class="text-4xl font-extrabold neon">💫 سیستم پایش قیمت </h1>
+    <button id="toggleTheme" class="glow-btn py-2 px-5 rounded-xl font-semibold">🌙 تغییر حالت</button>
+  </div>
+
+  <p class="text-gray-400 mb-8">نمایش زنده قیمت‌ها</p>
+
+  <div class="flex flex-wrap gap-4 mb-8">
+    <button id="requestPerm" class="glow-btn py-2 px-6 rounded-xl font-semibold">✅ درخواست اعلان</button>
+    <button id="clearHistory" class="glow-btn py-2 px-6 rounded-xl font-semibold bg-pink-600 hover:bg-pink-700">🧹 پاک کردن تاریخچه</button>
+    <button id="toggleTestMode" class="glow-btn py-2 px-6 rounded-xl font-semibold bg-purple-600 hover:bg-purple-700">
+      🧪 حالت تست: خاموش
+    </button>
+  </div>
+
+  <!-- Add new product -->
+  <div class="mb-10 flex flex-wrap gap-3 items-center">
+    <input id="newUrl" type="text"
+        placeholder="لینک محصول دیجی‌کالا را وارد کنید..."
+        class="flex-1 p-3 rounded-xl text-black focus:outline-none focus:ring-2 focus:ring-pink-500"
+    />
+    <button id="addProduct" class="glow-btn py-2 px-6 rounded-xl font-semibold">➕ افزودن محصول</button>
+  </div>
+
+  <h3 class="text-2xl font-bold mb-4 neon">📦 محصولات تحت نظر</h3>
+  <div id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+  <h3 class="text-2xl font-bold mt-12 mb-4 neon">📈 تاریخچه تغییر قیمت</h3>
+  <div class="overflow-x-auto rounded-2xl border border-indigo-400/40 shadow-lg">
+    <table class="min-w-full bg-gray-900 bg-opacity-70 rounded-2xl text-sm">
+      <thead class="bg-indigo-900/50 text-indigo-300">
+        <tr>
+          <th class="py-3 px-6 text-right">⏰ زمان</th>
+          <th class="py-3 px-6 text-right">📦 محصول</th>
+          <th class="py-3 px-6 text-right">💵 قیمت قبلی</th>
+          <th class="py-3 px-6 text-right">💎 قیمت جدید</th>
+          <th class="py-3 px-6 text-right">📊 تغییر</th>
+        </tr>
+      </thead>
+      <tbody id="historyTable" class="divide-y divide-indigo-800"></tbody>
+    </table>
+  </div>
+
+  <p class="text-gray-400 mt-6">🔗 وضعیت اتصال: <span id="sseStatus" class="font-semibold px-3 py-1 rounded-lg bg-red-600">قطع</span></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
