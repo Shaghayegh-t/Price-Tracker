@@ -4,9 +4,19 @@
 یک ابزار **هوشمند و خودکار برای دنبال کردن قیمت محصولات دیجی‌کالا**  
 با امکان **نوتیفیکیشن، ایمیل، تاریخچه قیمت و حالت تست**.  
 این پروژه از **Puppeteer** برای اسکرپینگ و **Node.js** برای مدیریت و ذخیره داده‌ها استفاده می‌کند.
-[![video of project](assets/video-thumbnail.png)](assets/price-tracker.mp4).
+## 🎥 پیش‌نمایش (Demo)
+<p align="center">
+  <img src="assets/price-tracker.gif" alt="نمایش ویدیو" width="600">
+</p>
 
-![Preview](assets/Dashboard.jpg)
+## 🖼️ تصایر پروژه
+
+<p align="center">
+  <img src="assets/Dashboard.jpg" alt="تصویر ۱" width="200">
+  <img src="assets/Email.png" alt="تصویر ۲" width="200">
+  <img src="assets/PriceHistory.png" alt="تصویر ۳" width="200">
+</p>
+
 
 ---
 
