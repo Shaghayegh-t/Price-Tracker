@@ -1,4 +1,6 @@
-let dark = true;
+
+document.addEventListener("DOMContentLoaded", () => {
+  let dark = true;
 let particleColor = "rgba(0,255,255,.5)";
 let lineColor = "rgba(255,100,255,";
 
@@ -255,4 +257,9 @@ document.getElementById("toggleTestMode").addEventListener("click", async () => 
     console.warn("⚠️ Error updating test mode:", err);
   }
 });
+
+
+
+});
+
 
