@@ -47,7 +47,7 @@
 1. کلون کردن ریپازیتوری:
 
 ```bash
-git clone https://github.com/USERNAME/Price-Tracker.git
+git clone https://github.com Shaghayegh-t/Price-Tracker.git
 cd Price-Tracker
 ```
 
